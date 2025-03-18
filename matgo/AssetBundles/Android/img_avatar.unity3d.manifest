@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 4049186112
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c19e899507bd83a0ab72d8ed6c8a6de2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AndroidPatch/img_avatar/avatar_0005.png
+- Assets/AndroidPatch/img_avatar/avatar_0001.png
+- Assets/AndroidPatch/img_avatar/avatar_0008.png
+- Assets/AndroidPatch/img_avatar/avatar_0010.png
+- Assets/AndroidPatch/img_avatar/avatar_0002.png
+- Assets/AndroidPatch/img_avatar/avatar_0007.png
+- Assets/AndroidPatch/img_avatar/avatar_0004.png
+- Assets/AndroidPatch/img_avatar/avatar_0006.png
+- Assets/AndroidPatch/img_avatar/avatar_0003.png
+- Assets/AndroidPatch/img_avatar/avatar_0009.png
+- Assets/AndroidPatch/img_avatar/avatar_0011.png
+Dependencies: []

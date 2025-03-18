@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<update>
+      
+      <code name ="img_store.unity3d">
+        <ver>2</ver>
+        <url><![CDATA[http://15.152.125.228:2100/mobilepatch/matgojangbi/img_store.unity3d]]></url>
+      </code> 
+      <code name ="img_card.unity3d">
+        <ver>2</ver>
+        <url><![CDATA[http://15.152.125.228:2100/mobilepatch/matgojangbi/img_card.unity3d]]></url>
+      </code> 
+      <code name ="img_avatar.unity3d">
+        <ver>2</ver>
+        <url><![CDATA[http://15.152.125.228:2100/mobilepatch/matgojangbi/img_avatar.unity3d]]></url>
+      </code> 
+
+</update>
+
