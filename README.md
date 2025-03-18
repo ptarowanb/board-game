@@ -1,98 +1,62 @@
-Game Server Project
+🎮 게임 서버 프로젝트
 
-📌 Overview
 
-This project is a multiplayer game server architecture that integrates different technologies for various components. The stack consists of ZNet for game server networking, PHP for the web application, and Unity for the game client.
+📌 개요
+본 프로젝트는 멀티플레이 게임 서버 아키텍처로, 다양한 기술을 조합하여 구성되었습니다. ZNet을 기반으로 한 게임 서버, PHP 기반의 웹페이지, Unity 기반의 게임 클라이언트로 구성되어 있으며, 실시간 네트워크 처리를 최적화한 구조를 갖추고 있습니다.
 
-🏗️ Tech Stack
 
-1️⃣ Game Server
+🏗️ 기술 스택
 
-Technology: ZNet (C#)
+1️⃣ 게임 서버
+기술: ZNet (C#)
+역할: 실시간 멀티플레이 처리, 클라이언트 연결 관리, 게임 로직 처리
+주요 기능:
+다수의 클라이언트와 안정적인 네트워크 통신 지원
+마스터 서버를 통한 개별 게임 서버 모니터링 및 제어
+높은 동시 접속 처리 능력 제공
 
-Role: Handles multiplayer game logic, player connections, and real-time data synchronization.
+2️⃣ 웹 서버 (관리 및 사용자 대시보드)
+기술: PHP (백엔드)
+역할: 사용자 인증, 게임 데이터 관리, 서버 상태 모니터링
+주요 기능:
+회원가입 및 로그인 처리
+게임 데이터 및 리더보드 관리
+서버 상태 모니터링 및 로그 기록
 
-Features:
+3️⃣ 게임 클라이언트
+기술: Unity (C#)
+역할: 플레이어가 직접 사용하는 프론트엔드 애플리케이션
+주요 기능:
+ZNet 기반의 실시간 네트워크 연결
+UI 및 그래픽 렌더링
+서버와의 데이터 동기화
 
-Manages client-server communication efficiently
+🔗 시스템 아키텍처
+Unity 게임 클라이언트 → ZNet 게임 서버에 연결하여 실시간 멀티플레이 처리
+ZNet 게임 서버 → 게임 로직을 실행하고 클라이언트 간 데이터 동기화
+웹 서버 (PHP) → 지속적인 게임 데이터 관리 및 API 제공
+마스터 서버 (ZNet) → 개별 게임 서버의 상태를 모니터링하고 관리
 
-Supports large-scale concurrent connections
+🛠️ 설치 및 실행 방법
+게임 서버 (ZNet - C#)
+ZNet 의존성 패키지를 설치합니다.
+MasterServer 설정 파일에서 IP, 포트, 최대 접속자 수를 설정합니다.
+마스터 서버를 실행하여 클라이언트와의 연결을 대기합니다.
 
-Provides a master server to monitor and control individual game servers
+웹 서버 (PHP/ASP)
+PHP 환경을 설정합니다.
+게임 데이터베이스를 연결합니다.
+API 엔드포인트를 배포하여 게임 클라이언트와 서버가 데이터를 주고받을 수 있도록 구성합니다.
 
-2️⃣ Web Page (Admin & User Dashboard)
+게임 클라이언트 (Unity - C#)
+ZNet 네트워크 라이브러리를 Unity 프로젝트에 추가합니다.
+MasterServer에서 게임 서버 정보를 받아 접속을 시도합니다.
+게임 내 실시간 데이터 동기화 및 UI 로직을 구현합니다.
 
-Technology: PHP (Backend)
+🚀 향후 개선 사항
+WebSocket을 활용한 네트워크 최적화
+서버 성능 모니터링 대시보드 추가
+데이터베이스 최적화 및 캐싱 도입
+매칭 시스템 도입을 통한 플레이어 연결 최적화
 
-Role: Provides a web interface for game management, user authentication, and statistics tracking.
-
-Features:
-
-User registration and authentication
-
-Game data monitoring and server status checks
-
-Leaderboards and player statistics management
-
-3️⃣ Game Client
-
-Technology: Unity (C#)
-
-Role: Frontend application that players interact with.
-
-Features:
-
-Connects to the game server via ZNet
-
-Handles in-game UI and rendering
-
-Synchronizes real-time data with the server
-
-🔗 Architecture Flow
-
-Unity Game Client → Sends requests to ZNet Game Server for real-time multiplayer interactions.
-
-ZNet Game Server → Processes game logic and synchronizes player actions.
-
-Web Page (PHP Backend) → Stores and retrieves persistent game data, including user profiles, scores, and logs.
-
-Master Server (ZNet) → Manages multiple game servers, handles shutdowns, and monitors connections.
-
-📖 Setup & Deployment
-
-Game Server (ZNet - C#)
-
-Install necessary dependencies for ZNet.
-
-Configure MasterServer settings (IP, Port, MaxConnections).
-
-Start the MasterServer to handle incoming connections.
-
-Web Server (PHP Backend)
-
-Set up an Apache/Nginx server with PHP.
-
-Connect to the game database.
-
-Deploy the PHP scripts to provide API endpoints for the game client and server.
-
-Game Client (Unity - C#)
-
-Import the ZNet library for networking.
-
-Connect to the MasterServer and retrieve game server details.
-
-Implement game logic, synchronization, and real-time updates.
-
-🚀 Future Improvements
-
-Implement WebSockets for enhanced real-time communication.
-
-Add a monitoring dashboard for server performance tracking.
-
-Optimize database queries to improve efficiency.
-
-Introduce a matchmaking system for seamless player connections.
-
-💡 This project aims to provide a scalable multiplayer game infrastructure with seamless communication between the game server, web server, and client.
-
+💡 이 프로젝트는 확장성과 성능을 고려하여 구축된 멀티플레이 게임 서버 아키텍처입니다.
